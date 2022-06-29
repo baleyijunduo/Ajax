@@ -1,0 +1,103 @@
+//注册用户名
+git config --global user.name "haohao"
+
+//注册用户邮箱
+git config --global user.email "1340280685@qq.com"
+
+//显示全局信息
+git config --list --global
+
+//查看文件状态
+git status
+
+//精简方式显示文件状态
+git status -s
+
+//跟踪文件
+git add xx.html
+
+//提交文件
+//-m后可提交描述消息
+git commit -m "提交成功"
+
+//仓库中修改过未保存的文件则出现红色的M
+//更改过的文件通过git add提交到暂存区
+//再用git commit提交到仓库中
+
+//用git仓库的文件覆盖工作区文件（撤销操作）
+git checkout -- xx.html
+
+
+//批量跟踪文件
+git add .
+
+//从暂存文件中移除
+git reset HEAD xx.html
+
+//把跟踪文件直接放入git仓库
+git commit -a -m "描述消息"
+
+//从git仓库和工作区中同时移除index.js文件
+git rm -f index.js
+
+//只从git仓库中移除index.css,但保留工作区中的index.css文件
+git rm --cached index.css
+
+//回顾提交目录
+git log
+
+//只展示最新两条历史
+git log -2
+
+//一行上展示两条提交历史信息
+git log -2 --pretty=oneline
+
+//自定义输出格式
+//%h：提交的简写哈希值 %an：作者名字 %ar：作者修订日期，按多久以前的方式显示 %s提交说明
+git log -2 --pretty = format:"%h | %an | %ar | %s"
+
+//在一行上展示所有提交历史
+git log --pretty=oneline
+
+//使用git reset -hard 命令，根据指定提交ID回退到指定版本
+git reset --hard<CommitID>
+
+//在旧版本中查看操作历史
+git reflog --pretty = oneline
+
+//第一次上传新的仓库到github上
+git push -u origin master
+
+//上传新的仓库到github上（不是第一次推送）
+git push
+
+//检查ssh配置是否成功
+ssh -T git@github.com
+
+//将远程仓库克隆到本地
+git clone 远程仓库地址
+
+//查看分支
+git branch
+
+//基于当前分支创建新分支
+git branch 分支名称
+
+//切换分支
+git checkout 分支名称
+
+//快速创建切换分支
+git checkout -b 分支名称
+
+//合并分支
+git merge login
+
+//删除分支
+//不能在该分支上销毁该分支
+git branch -d 分支名称
+
+
+//关联本地分支和远程分支，只有在第一次推送时需要 -u 参数
+git push -u 远程仓库别名 本地分支名称: 远程分支名称
+
+

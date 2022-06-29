@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form表单提交后，整个页面都会跳转，用户体验差 -->
+    <!-- 在标点同步提交后，页面之前的状态和数据会丢失 -->
+    <!-- 可以让表单采集数据，Ajax提交数据 -->
+
+    <script>
+        // 两种监听方式
+        $('#form1').submit(function(e){
+            alert('监听到了表单的提交事件');
+        })
+
+        $('form1').on('sbumit',function(e){
+            alert('监听到了表单的提交事件');
+        })
+    </script>
+</body>
+</html>
