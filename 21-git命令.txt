@@ -7,6 +7,9 @@ git config --global user.email "1340280685@qq.com"
 //显示全局信息
 git config --list --global
 
+//创建新的git仓库
+git init
+
 //查看文件状态
 git status
 
