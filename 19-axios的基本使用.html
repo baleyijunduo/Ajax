@@ -18,12 +18,12 @@
             //路径
             var url = 'http://www.liulongbin.top:3006/api/get';
             //信息
-            var paramsObj = {name:'zs',age:20};
+            var paramsObj = {name:'haohao',age:20};
             //利用params写入筛选参数
             //then为异步执行，在then前面的函数执行完毕后再调用then
             //res.data才是接口返回的真正数据
             axios.get(url, { params: paramsObj }).then(function (res) {
-                console.log(res);
+                console.log(res.data);
             })
         })
 
